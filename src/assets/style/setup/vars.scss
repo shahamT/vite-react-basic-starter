@@ -1,0 +1,95 @@
+:root {
+
+  /* ============ COLOR PALETTE ============ */
+
+  /* === Main Colors === */
+  --primary-color: #2a7f62;
+  --primary-color-light: #55b49a;
+  --primary-color-dark: #1f5c49;
+  --primary-color-10: rgba(42, 127, 98, 0.1);
+
+  --secondary-color: #1d3557;
+  --secondary-color-light: #457b9d;
+  --secondary-color-dark: #0f223c;
+  --secondary-color-10: rgba(29, 53, 87, 0.1);
+
+  --accent-color: #e76f51;
+  --accent-color-light: #f4a78b;
+  --accent-color-dark: #c2533b;
+  --accent-color-10: rgba(231, 111, 81, 0.1);
+
+  /* === Semantic Colors === */
+  --positive-color: #2ecc71;
+  --positive-color-hover: #27ae60;
+  --positive-color-selected: #d4f5e5;
+
+  --negative-color: #e74c3c;
+  --negative-color-hover: #c0392b;
+  --negative-color-selected: #f9d4d0;
+
+  --warning-color: #f39c12;
+  --warning-color-hover: #e67e22;
+  --warning-color-selected: #fceccf;
+
+  /* === Text Colors === */
+  --primary-text-color: #2e2e2e;
+  --secondary-text-color: #5c5c5c;
+  --inverted-text-color: #f2f2f2;
+
+  --link-color: #2c3e50;
+  --link-color-hover: #3e5871;
+
+  /* === Background Colors === */
+  --primary-bg-color: #f7f9fa;
+  --secondary-bg-color: #edf1f3;
+  --primary-inverted-bg-color: #2b3a42;
+  --secondary-inverted-bg-color: #1f2a30;
+
+  --backdrop--bg-color: rgba(41, 47, 76, 0.7);
+
+  /* === Gray Colors === */
+  --gray-color-1: #f7f9fa;
+  --gray-color-2: #e3e7ea;
+  --gray-color-3: #cfd6da;
+  --gray-color-4: #b0b9be;
+  --gray-color-5: #8a9399;
+  --gray-color-6: #5c666d;
+
+  /* === B&W === */
+
+  --black: #000000;
+  --white: #ffffff;
+
+  /* ============ FONTS ============ */
+
+  --font-title: Roboto, Noto Sans Hebrew, Noto Kufi Arabic, Noto Sans JP, sans-serif;
+  --font-body: Roboto, Noto Sans Hebrew, Noto Kufi Arabic, Noto Sans JP, sans-serif;
+
+  /* ============ BORDER RADIUS ============ */
+
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-mdl: 12px;
+  --border-radius-lg: 16px;
+  --border-radius-round: 999px;
+
+  /* ============ SHADOWS ============ */
+
+  --box-shadow-xs: 0px 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --box-shadow-small: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  --box-shadow-medium: 0px 6px 20px rgba(0, 0, 0, 0.2);
+  --box-shadow-large: 0px 15px 50px rgba(0, 0, 0, 0.3);
+
+  /* ============ TRANSITIONS ============ */
+
+  --transition-xs: 100ms;
+  --transition-sm: 150ms;
+  --transition-md: 200ms;
+  --transition-lg: 300ms;
+  --transition-xl: 400ms;
+
+  /* ============ Others ============ */
+
+  /* === Disabled === */
+  --disabled-opacity: 0.38;
+}

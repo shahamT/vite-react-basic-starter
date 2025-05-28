@@ -1,0 +1,49 @@
+.flash-msg {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  height: 48px;
+  padding-inline: 16px 20px;
+  border-radius: 4px;
+  font-weight: 300;
+  color: var(--inverted-text-color, --white);
+
+
+  z-index: 100;
+  box-shadow: var(--box-shadow-medium, 0px 6px 20px rgba(0, 0, 0, 0.2));
+
+  transition: opacity var(--transition-lg, 0.3s) ease, transform var(--transition-lg, 0.3s) ease;
+  opacity: 0;
+
+  p {
+    font-size: 14px;
+  }
+
+  .icon {
+    font-size: 18px;
+  }
+
+  /* Visible state */
+  &.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    pointer-events: auto;
+  }
+
+  /* Types */
+  &.success {
+    background-color: var(--positive-color, #00854d);
+  }
+
+  &.error {
+    background-color: var(--negative-color, #d83a52);
+  }
+
+}

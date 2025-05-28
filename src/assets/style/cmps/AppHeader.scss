@@ -1,0 +1,11 @@
+.AppHeader {
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+
+    height: 100px;
+    flex: 0 0;
+
+    background-color: var(--primary-inverted-bg-color);
+    color: var(--inverted-text-color);
+}

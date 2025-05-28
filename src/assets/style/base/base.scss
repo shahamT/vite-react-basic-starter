@@ -1,0 +1,276 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	font-family: var(--font-body);
+	font-weight: 400;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	color: var(--primary-text-color);
+}
+
+#root {
+	height: 100vh;
+}
+
+.app {
+	height: 100%;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	padding: 0;
+	font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-title);
+}
+
+a {
+	text-decoration: none;
+	color: unset;
+}
+
+img,
+embed,
+video,
+object {
+	display: block;
+	max-width: 100%;
+}
+
+
+button {
+	cursor: pointer;
+}
+
+select {
+	cursor: pointer;
+}
+
+
+/* ============ BUTTON BASE ============ */
+
+button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	align-self: start;
+	justify-self: start;
+
+	padding: 0.6em 1.2em;
+	border: 2px solid transparent;
+
+	font-size: 1rem;
+	font-weight: 500;
+	font-family: var(--font-body);
+
+	border-radius: var(--border-radius-md);
+
+	cursor: pointer;
+	transition:
+		background-color var(--transition-md) ease,
+		color var(--transition-md) ease,
+		border-color var(--transition-md) ease;
+
+	&.small {
+		padding: 0.4em 0.9em;
+		font-size: 0.875rem;
+		border-radius: var(--border-radius-sm);
+	}
+
+	&.filled {
+		&.primary {
+			background-color: var(--primary-color);
+			color: var(--inverted-text-color);
+
+			&:hover {
+				background-color: var(--primary-color-dark);
+			}
+		}
+
+		&.secondary {
+			background-color: var(--secondary-color);
+			color: var(--inverted-text-color);
+
+			&:hover {
+				background-color: var(--secondary-color-dark);
+			}
+		}
+
+		&.accent {
+			background-color: var(--accent-color);
+			color: var(--inverted-text-color);
+
+			&:hover {
+				background-color: var(--accent-color-dark);
+			}
+		}
+	}
+
+	&.outlined {
+		background-color: transparent;
+
+		&.primary {
+			color: var(--primary-color);
+			border-color: var(--primary-color);
+
+			&:hover {
+				background-color: var(--primary-color-10);
+			}
+		}
+
+		&.secondary {
+			color: var(--secondary-color);
+			border-color: var(--secondary-color);
+
+			&:hover {
+				background-color: var(--secondary-color-10);
+			}
+		}
+
+		&.accent {
+			color: var(--accent-color);
+			border-color: var(--accent-color);
+
+			&:hover {
+				background-color: var(--accent-color-10);
+			}
+		}
+	}
+
+	&.clear {
+		background-color: transparent;
+		border-color: transparent;
+
+		&.primary {
+			color: var(--primary-color);
+
+			&:hover {
+				background-color: var(--primary-color-10);
+			}
+		}
+
+		&.secondary {
+			color: var(--secondary-color);
+
+			&:hover {
+				background-color: var(--secondary-color-10);
+			}
+		}
+
+		&.accent {
+			color: var(--accent-color);
+
+			&:hover {
+				background-color: var(--accent-color-10);
+			}
+		}
+	}
+}
+
+
+/* ============ INPUT / SELECT / TEXTAREA BASE ============ */
+input,
+select,
+textarea {
+	all: unset;
+	box-sizing: border-box;
+	width: 100%;
+
+	align-self: start;
+	justify-self: start;
+
+	font-family: var(--font-body);
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.4;
+
+	padding: 0.6em 0.9em;
+	border: 1px solid var(--gray-color-3);
+	border-radius: var(--border-radius-md);
+	background-color: var(--primary-bg-color);
+	color: var(--primary-text-color);
+
+	transition:
+		border-color var(--transition-md) ease,
+		background-color var(--transition-md) ease;
+
+	&::placeholder {
+		color: var(--secondary-text-color);
+	}
+
+	&:hover {
+		border-color: var(--gray-color-4);
+	}
+
+	&:focus {
+		border-color: var(--primary-color);
+	}
+
+	&:disabled {
+		opacity: var(--disabled-opacity);
+		cursor: not-allowed;
+	}
+}
+
+/* ============ TEXTAREA ============ */
+textarea {
+	resize: vertical;
+	min-height: 6em;
+}
+
+/* ============ SELECT WRAPPER ============ */
+.select-wrapper {
+	position: relative;
+	width: 100%;
+
+	align-self: start;
+	justify-self: start;
+
+	select {
+		padding-right: 2em;
+
+		&:focus+.select-icon {
+			transform: translateY(-50%) rotate(180deg);
+		}
+	}
+
+	.select-icon {
+		position: absolute;
+		right: 0.9em;
+		top: 50%;
+		transform: translateY(-50%) rotate(0deg);
+		pointer-events: none;
+		transition: transform var(--transition-md) ease;
+		color: var(--secondary-text-color);
+		font-size: 0.8em;
+	}
+}
+
+// Usage:
+// <div class="select-wrapper">
+//     <select>
+//         <option>option</option>
+//     </select>
+//     <span class="select-icon fa fa-solid fa-chevron-down"/>
+// </div>
